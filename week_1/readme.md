@@ -1,25 +1,24 @@
 # Simple LLM Q&A Application
 
-In this week's expert session, we implemented a simple Large Language Model (LLM) application with a Streamlit frontend, allowing users to interact with various open-source models via the Groq API.
+This app provides a basic question-answering experience with a Streamlit frontend. It supports both **Groq** (open-source LLMs) and **OpenAI** (GPT-5 family) and auto-switches provider based on the selected model.
 
 ## 1\. Overview
 
 The application is a basic question answering system that uses the Groq API to access and utilize open-source language models. It features a command-line interface (CLI) for core functionality and a Streamlit-based web interface for user interaction and configuration.
 
-## 2\. Features
+## Features
 
-  * **Groq API Integration:** Connects to the Groq API to access a range of open-source LLMs.
-  * **Configurable Models:** Users can select different LLMs (e.g., Llama 3.1 8B, Llama 3.3 70B, OpenAI OSS 20B) from the Groq API Client.
-  * **API Key Input:** Option to input a Groq API key directly in the Streamlit frontend.
-  * **Adjustable Temperature:** Controls the randomness of model responses using a temperature slider.
-  * **Output Control:** Sets the maximum length of the model's generated responses.
-  * **Prompt Customization:** Defines a system prompt to guide the LLM's behavior and context.
-  * **Chat History Clearing:** A button to clear the current chat history in the Streamlit application.
+- **Groq + OpenAI (auto-switch):** Select a model; the app picks the right provider automatically.
+- **Configurable Models:** Groq (e.g., `llama-3.1-8b-instant`, `llama-3.3-70b-versatile`) and OpenAI (`gpt-5`, `gpt-5-mini`, `gpt-5-nano`).
+- **Chatbot Persona:** Give your assistant a **name** and a **default system prompt** to guide behavior.
+- **API Keys:** Enter keys in the Streamlit sidebar or via `.env`.
+- **Adjustable Temperature & Max Tokens.**
+- **Prompt Customization** and **Clear Chat History**.
 
 ## 3\. Tools & Frameworks Used
 
   * **Python:** The primary programming language.
-  * **Groq API:** For accessing open-source LLMs.
+  * **Groq API** and **openAI API** For accessing open-source LLMs.
   * **Streamlit:** For building the interactive web frontend.
   * **`python-dotenv`:** For loading environment variables (API keys).
   * **`uv` (or `pip`, `conda`, `poetry`):** For virtual environment and dependency management.
@@ -129,6 +128,7 @@ In the workshop session, we primarily used `uv` for environment management. If y
     
     ``` 
     GROQ_API_KEY="your_groq_api_key_here"
+    OPENAI_API_KEY="your_openai_api_key_here"
     
     ```
 
@@ -167,8 +167,8 @@ This will open the application in your web browser. You can then:
 
 ``` 
 .
-├── .env                  # Environment variables (e.g., GROQ_API_KEY)
-├── main.py               # Core LLM application logic
+├── .env                  # Environment variables (e.g., GROQ_API_KEY, OPENAI_API_KEY)
+├── main.py               # Core LLM application logic (Groq + OpenAI)
 ├── app_config.py         # Configuration for environment variables
 ├── requirements.txt      # Python dependencies
 └── streamlit_app.py      # Streamlit web application
