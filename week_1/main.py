@@ -1,8 +1,12 @@
 """
 Simple LLM Application using Groq and OpenAI API
 """
-from appconfig import env_config
 from typing import List, Dict
+
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv(override=True)
 
 class LLMApp:
 
