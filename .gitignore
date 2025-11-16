@@ -3,3 +3,90 @@
 *.log
 *.venv
 *venv
+
+# -----------------------------
+# PYTHON / POETRY / UV PROJECT
+# -----------------------------
+
+# Byte-compiled / cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+.uv/
+.venv/*
+.env.local
+.python-version
+
+# Poetry lock and UV caches
+poetry.lock
+uv.lock
+.cache/
+.pytest_cache/
+.mypy_cache/
+.dmypy.json
+.prof
+
+# -----------------------------
+# ENVIRONMENT VARIABLES
+# -----------------------------
+.env
+.env.*
+!env.example
+
+# -----------------------------
+# EDITORS / IDEs
+# -----------------------------
+
+# VSCode
+.vscode/
+.history/
+.code-workspace
+
+# PyCharm
+.idea/
+
+# Jupyter / Notebooks
+.ipynb_checkpoints/
+
+# -----------------------------
+# BUILD / DIST FILES
+# -----------------------------
+build/
+dist/
+*.egg-info/
+*.egg
+.eggs/
+
+# -----------------------------
+# LOGS / TEMP FILES
+# -----------------------------
+*.log
+*.tmp
+logs/
+tmp/
+.DS_Store
+
+# -----------------------------
+# STREAMLIT / FASTAPI ARTIFACTS
+# -----------------------------
+# Streamlit’s internal cache directory
+.streamlit/
+# Uploaded files or generated outputs (if any)
+uploads/
+outputs/
+__output__/
+# Tavily research markdowns, optional cache folder
+AINews/
+data/
+results/
+
+# -----------------------------
+# MISC
+# -----------------------------
+*.sqlite3
+*.db

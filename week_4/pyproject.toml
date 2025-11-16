@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "week_4"
+version = "0.1.0"
+description = "Agentic AI Blog Generation System (LangGraph + Groq + Streamlit)"
+authors = ["Norbert Lupamo <lupamo93@gmail.com>"]
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+fastapi = "^0.115.0"
+uvicorn = {version = "^0.34.0", extras = ["standard"]}
+streamlit = "^1.39.0"
+python-dotenv = "^1.0.1"
+
+langchain = "^0.3.0"
+langchain-core = "^0.3.0"
+langchain-community = "^0.3.0"
+langchain-groq = "^0.3.0"
+
+langgraph = "^0.4.0"
+langgraph-cli = {version = "^0.3.1", extras = ["inmem"]}
+
+tavily-python = "^0.5.0"
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.0.0"
+ruff = "^0.8.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
